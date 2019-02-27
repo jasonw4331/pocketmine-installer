@@ -1,4 +1,6 @@
 !include MUI2.nsh
+!include LogicLib.nsh
+!include x64.nsh
 
 BrandingText "https://pmmp.io"
 InstallDir "$EXEDIR\PocketMine-MP"
@@ -10,6 +12,14 @@ ShowInstDetails nevershow
 
 Function createshortcut
     CreateShortcut "$DESKTOP\PocketMine-MP.lnk" "$INSTDIR\start.cmd"
+FunctionEnd
+
+Function .onInit
+    ${If} ${RunningX64}
+    ${Else}
+        MessageBox MB_OK "PocketMine-MP is no longer supported on 32-bit systems."
+        Abort
+    ${EndIf}
 FunctionEnd
 
 !define MUI_WELCOMEFINISHPAGE_BITMAP "welcome-finish.bmp"
@@ -41,5 +51,5 @@ Section "Install"
     inetc::get /NOCANCEL https://jenkins.pmmp.io/job/PHP-7.2-Aggregate/lastSuccessfulBuild/artifact/PHP-7.2-Windows-x64.zip $TEMP\PHP-7.2-Windows-x64.zip
     inetc::get /NOCANCEL https://aka.ms/vs/15/release/VC_redist.x64.exe $TEMP\VC_redist.x64.exe
     ZipDLL::extractall $TEMP\PHP-7.2-Windows-x64.zip $INSTDIR
-    ExecWait '"$TEMP\VC_redist.x64.exe" /install /passive /norestart'
+    ExecWait '"$TEMP\VC_redist.x64.exe" /install /passive /norestart'    
 SectionEnd
