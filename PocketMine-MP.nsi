@@ -27,6 +27,7 @@ Section "Install"
     SetDetailsPrint none
     inetc::get /NOCANCEL https://jenkins.pmmp.io/job/PocketMine-MP/promotion/process/Stable/lastSuccessfulBuild/artifact/PocketMine-MP.phar PocketMine-MP.phar
     inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/start.cmd start.cmd
+    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/start.ps1 start.ps1
     inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/LICENSE LICENSE
     inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/README.md README.md
     inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/CONTRIBUTING.md CONTRIBUTING.md 
