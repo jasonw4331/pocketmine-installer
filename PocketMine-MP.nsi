@@ -8,10 +8,17 @@ RequestExecutionLevel "user"
 SpaceTexts "none"
 ShowInstDetails nevershow
 
+Function createshortcut
+    CreateShortcut "$DESKTOP\PocketMine-MP.lnk" "$INSTDIR\start.cmd"
+FunctionEnd
+
 !define MUI_WELCOMEFINISHPAGE_BITMAP "welcome-finish.bmp"
 !define MUI_ABORTWARNING
 !define MUI_FINISHPAGE_RUN "start.cmd"
 !define MUI_FINISHPAGE_RUN_TEXT "Run PocketMine-MP"
+!define MUI_FINISHPAGE_SHOWREADME
+!define MUI_FINISHPAGE_SHOWREADME_TEXT "Create Desktop Shortcut"
+!define MUI_FINISHPAGE_SHOWREADME_FUNCTION createshortcut
 !define MUI_WELCOMEPAGE_TITLE "Welcome to the PocketMine-MP Installation Wizard"
 !define MUI_FINISHPAGE_TITLE "Complete PocketMine-MP Setup"
 !define MUI_ICON "icon.ico"
