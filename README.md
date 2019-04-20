@@ -1,5 +1,7 @@
-# PocketMine Installer
-[![forthebadge](https://forthebadge.com/images/badges/powered-by-netflix.svg)](https://forthebadge.com)
+# PocketMine Installer [![GitHub Releases (by Asset)](https://img.shields.io/github/downloads/nathfreder/pocketmine-installer/latest/PocketMine-MP.exe.svg)](https://github.com/nathfreder/pocketmine-installer/releases)
+
+## ⚠️ Download Installer
+You can download the latest release from [GitHub Releases](https://github.com/nathfreder/pocketmine-installer/releases).
 
 ## Demo
 ![Imgur](https://i.imgur.com/UA8Hgaq.gif)
