@@ -14,5 +14,5 @@ You can download the latest release from [GitHub Releases](https://github.com/na
 
 #### Compiling
 ```sh
-makensis /DPHP_BUILD_NUMBER=58 /DPHP_BIN_ZIP_NAME=php-7.3.5-vc15-x64.zip "PocketMine-MP.nsi"
+makensis /DPHP_BUILD_NUMBER=64 "PocketMine-MP.nsi"
 ```
