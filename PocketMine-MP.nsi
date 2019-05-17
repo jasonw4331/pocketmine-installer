@@ -11,7 +11,7 @@ SpaceTexts "none"
 ShowInstDetails "nevershow"
 
 Function createshortcut
-    CreateShortcut "$DESKTOP\PocketMine-MP.lnk" "$INSTDIR\start.cmd"
+    CreateShortcut "$DESKTOP\PocketMine-MP.lnk" "$INSTDIR\start.cmd" "" "$EXEDIR\PocketMine-MP.exe" 0
 FunctionEnd
 
 Function .onInit
