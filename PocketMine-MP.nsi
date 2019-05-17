@@ -15,8 +15,7 @@ Function createshortcut
 FunctionEnd
 
 Function .onInit
-    ${If} ${RunningX64}
-    ${Else}
+    ${IfNot} ${RunningX64}
         MessageBox MB_OK "PocketMine-MP is no longer supported on 32-bit systems."
         Abort
     ${EndIf}
