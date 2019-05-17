@@ -46,12 +46,12 @@ FunctionEnd
 Section "Install"
     SetOutPath $INSTDIR
     SetDetailsPrint none
-    inetc::get /NOCANCEL https://jenkins.pmmp.io/job/PocketMine-MP/promotion/process/Stable/lastSuccessfulBuild/artifact/PocketMine-MP.phar PocketMine-MP.phar
-    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/start.cmd start.cmd
-    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/start.ps1 start.ps1
-    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/LICENSE LICENSE
-    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/README.md README.md
-    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/master/CONTRIBUTING.md CONTRIBUTING.md 
+    inetc::get /NOCANCEL https://jenkins.pmmp.io/job/PocketMine-MP/Stable/artifact/PocketMine-MP.phar PocketMine-MP.phar
+    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/start.cmd start.cmd
+    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/start.ps1 start.ps1
+    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/LICENSE LICENSE
+    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/README.md README.md
+    inetc::get /NOCANCEL https://raw.githubusercontent.com/pmmp/PocketMine-MP/stable/CONTRIBUTING.md CONTRIBUTING.md 
     inetc::get /NOCANCEL https://dev.azure.com/pocketmine/a29511ba-1771-4ad2-a606-23c00a4b8b92/_apis/build/builds/${PHP_BUILD_NUMBER}/artifacts?artifactName=${PHP_ARTIFACT_NAME}&api-version=5.1-preview.5&%24format=zip $TEMP\Windows.zip
     ZipDLL::extractall $TEMP\Windows.zip $TEMP
     ZipDLL::extractall $TEMP\Windows\${PHP_BIN_ZIP_NAME} $INSTDIR
